@@ -3,7 +3,6 @@ package net.victorbetoni.cotilbot.command;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.victorbetoni.cotilbot.CotilBOT;
-import net.victorbetoni.cotilbot.api.event.CommandPerformedEvent;
 import net.victorbetoni.cotilbot.util.CommandContext;
 
 import java.util.Arrays;
