@@ -1,0 +1,6 @@
+{
+  "prefix": "c!",
+  "commands": [
+    {"name": "info", "className": "InfoCommand"}
+  ]
+}
