@@ -1,19 +1,29 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.1'
+    }
+}
+
 plugins {
     id 'java-library'
     id 'application'
     id 'com.github.johnrengelman.shadow' version '5.2.0'
 }
 
-mainClassName = 'com.example.jda.Bot'
-
-version '1.0'
-def jdaVersion = '4.2.0_168'
-
-sourceCompatibility = targetCompatibility = 1.8
-
 repositories {
     jcenter()
 }
+
+version '1.0'
+def jdaVersion = '4.2.0_168'
+sourceCompatibility = targetCompatibility = 1.8
+mainClassName = 'net.victorbetoni.cotilbot.BotInitializer'
+
+apply plugin: 'java'
+apply plugin: 'com.github.johnrengelman.shadow'
 
 dependencies {
     compile "net.dv8tion:JDA:$jdaVersion"
@@ -21,7 +31,6 @@ dependencies {
     api 'org.apache.commons:commons-math3:3.6.1'
     implementation 'com.google.guava:guava:29.0-jre'
     implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
-
 }
 
 compileJava.options.encoding = 'UTF-8'

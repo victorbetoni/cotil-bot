@@ -4,7 +4,6 @@
 # Ignore Gradle build output directory
 build
 
-#Private files (token)
 src/main/resources/private/
 
 .idea

@@ -28,7 +28,7 @@ public class InfoCommand implements Command {
                 "Esse projeto é, acima de tudo, para aprendizado. Você pode ver o meu código no Github! " +
                         "(https://github.com/localthreader/cotil-bot). Sou feito em JDA (Java). Pull requests e quaisquer " +
                         "tipo de contribuições são muito bem vindas, se sinta a vontade para reportar qualquer bug.", false);
-        builder.addField("Redes sociais do meu criador:", "Instagram: @victor.betoni\nTwitter: @vickkktor",false);
+        builder.addField("Redes sociais do meu criador:", "Instagram: @victor.betoni\nTwitter: @vickktor_",false);
         builder.addBlankField(true);
         channel.sendMessage(builder.build()).queue();
     }
