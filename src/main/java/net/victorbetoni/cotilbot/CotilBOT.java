@@ -7,6 +7,7 @@ import net.dv8tion.jda.api.entities.Activity;
 import net.victorbetoni.cotilbot.command.Command;
 import net.victorbetoni.cotilbot.command.InfoCommand;
 import net.victorbetoni.cotilbot.command.CommandHandler;
+import net.victorbetoni.cotilbot.util.sql.Providers;
 import org.json.simple.JSONObject;
 
 import javax.security.auth.login.LoginException;
@@ -28,6 +29,7 @@ public class CotilBOT {
                 .setStatus(OnlineStatus.ONLINE)
                 .build();
 
+        Providers.PROVIDE_STAFF_INSERTS.accept("src/main/resources/sql/inserts/professores.sql");
         commandRegistry.put("info", new InfoCommand());
     }
 

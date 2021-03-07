@@ -1,3 +1,6 @@
 {
   "prefix": "c!",
+  "metrics": {
+    "staff_inserts": 0
+  }
 }

@@ -8,6 +8,7 @@ import org.json.simple.JSONObject;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicReference;
 
+//UNUSED
 public class CommandFinder {
     public static Optional<Class<? extends Command>> find(String cmdName) {
         JSONArray cmds = (JSONArray) CotilBOT.getInstance().getProperties().get("commands");

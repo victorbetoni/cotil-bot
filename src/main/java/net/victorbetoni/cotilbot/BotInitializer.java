@@ -1,5 +1,6 @@
 package net.victorbetoni.cotilbot;
 
+import net.victorbetoni.cotilbot.util.sql.Providers;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
