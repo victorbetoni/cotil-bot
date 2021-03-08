@@ -1,10 +1,1 @@
-{
-  "prefix": "c!",
-  "commands": {
-    "info": {
-      "alias": [
-        "info", "about"
-      ]
-    }
-  }
-}
+{"prefix":"c!","metrics":{"generated_staff_inserts":"1"},"commands":{"info":{"alias":["info","about"]}}}

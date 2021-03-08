@@ -28,9 +28,14 @@ public class CotilBOT {
                 .addEventListeners(new CommandHandler())
                 .setStatus(OnlineStatus.ONLINE)
                 .build();
-
-        Providers.PROVIDE_STAFF_INSERTS.accept("src/main/resources/sql/inserts/professores.sql");
         commandRegistry.put("info", new InfoCommand());
+
+        JSONObject metrics = (JSONObject) properties.get("metrics");
+        boolean generateStaffInserts = ((String)metrics.get("generated_staff_inserts")).equals("0") ? false : true;
+        if(generateStaffInserts) {
+            Providers.PROVIDE_STAFF_INSERTS.accept("src/main/resources/inserts/professores.sql");
+            metrics.put("generated_staff_inserts", "1");
+        }
     }
 
     public Map<String, Command> getCommandRegistry() {
