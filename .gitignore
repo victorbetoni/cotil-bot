@@ -1,9 +1,9 @@
 # Ignore Gradle project-specific cache directory
 .gradle
+.settings
+.idea
 
-# Ignore Gradle build output directory
+bin
 build
 
 src/main/resources/private/
-
-.idea
