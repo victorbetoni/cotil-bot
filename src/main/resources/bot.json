@@ -1,6 +1,10 @@
 {
   "prefix": "c!",
-  "metrics": {
-    "staff_inserts": 0
+  "commands": {
+    "info": {
+      "alias": [
+        "info", "about"
+      ]
+    }
   }
 }

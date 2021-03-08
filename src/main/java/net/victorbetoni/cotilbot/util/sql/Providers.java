@@ -52,7 +52,7 @@ public class Providers {
                             try {
                                 String staffName = ef.text();
                                 int primaryKey = index.getAndIncrement();
-                                String line = "INSERT INTO Professor VALUES (" + primaryKey + "," + department + "," + staffName + ")";
+                                String line = "INSERT INTO Professor VALUES (" + primaryKey + "," + department + "," + staffName + ");";
                                 bw.write(line + "\n");
                             } catch (IOException ex) {
                                 ex.printStackTrace();
