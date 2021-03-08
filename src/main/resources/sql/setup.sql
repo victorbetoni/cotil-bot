@@ -30,6 +30,7 @@ CREATE TABLE IF NOT EXISTS Professor (
 );
 
 CREATE TABLE IF NOT EXISTS AULAS_2021 (
+    Serie INT,
     CursoID INT,
     PeriodoID INT,
     MateriaID INT,
