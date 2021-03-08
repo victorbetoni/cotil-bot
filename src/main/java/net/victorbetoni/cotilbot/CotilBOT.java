@@ -11,6 +11,8 @@ import net.victorbetoni.cotilbot.util.sql.Providers;
 import org.json.simple.JSONObject;
 
 import javax.security.auth.login.LoginException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,10 +33,16 @@ public class CotilBOT {
         commandRegistry.put("info", new InfoCommand());
 
         JSONObject metrics = (JSONObject) properties.get("metrics");
-        boolean generateStaffInserts = ((String)metrics.get("generated_staff_inserts")).equals("0") ? false : true;
-        if(generateStaffInserts) {
-            Providers.PROVIDE_STAFF_INSERTS.accept("src/main/resources/inserts/professores.sql");
+        String generatedStaffInserts = (String) metrics.get("generated_staff_inserts");
+        if(generatedStaffInserts.equals("0")) {
+            Providers.PROVIDE_STAFF_INSERTS.accept("src/main/resources/sql/inserts/professores.sql");
             metrics.put("generated_staff_inserts", "1");
+            try (FileWriter file = new FileWriter("src/main/resources/bot.json")) {
+                file.write(properties.toJSONString());
+                file.flush();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 

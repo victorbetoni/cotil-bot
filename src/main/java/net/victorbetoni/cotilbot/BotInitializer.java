@@ -20,26 +20,13 @@ import java.util.Properties;
 public class BotInitializer {
 
     public static void main(String[] args) throws IOException {
-        //Providers.PROVIDE_STAFF_INSERTS.accept("src/main/resources/sql/inserts/professores.sql");
         try (Reader reader = new InputStreamReader(BotInitializer.class.getResourceAsStream("/bot.json"))) {
             CotilBOT bot = new CotilBOT();
             JSONParser parser = new JSONParser();
             Properties credentials = new Properties();
             credentials.load(BotInitializer.class.getResourceAsStream("/private/credentials.properties"));
             JSONObject jsonObject = (JSONObject) parser.parse(reader);
-            JSONObject metrics = (JSONObject) jsonObject.get("metrics");
-            String generatedStaffInserts = (String) metrics.get("generated_staff_inserts");
-            if(generatedStaffInserts.equals("0")) {
-                Providers.PROVIDE_STAFF_INSERTS.accept("src/main/resources/sql/inserts/professores.sql");
-                metrics.put("generated_staff_inserts", "1");
-                try (FileWriter file = new FileWriter("src/main/resources/bot.json")) {
-                    file.write(jsonObject.toJSONString());
-                    file.flush();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            //bot.setup(jsonObject, credentials.getProperty("token"));
+            bot.setup(jsonObject, credentials.getProperty("token"));
         } catch (Exception e) {
             e.printStackTrace();
         }
