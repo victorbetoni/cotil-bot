@@ -62,26 +62,26 @@ INSERT INTO Materia VALUES (54, 3, 'Concreto Armado');
 
 ----------------------------GEO----------------------------
 INSERT INTO Materia VALUES (54, 3, 'Geologia');
-INSERT INTO Materia VALUES (55, 3, 'SOLOS');
+INSERT INTO Materia VALUES (55, 3, 'Solos');
 INSERT INTO Materia VALUES (56, 3, 'DTOP');
-INSERT INTO Materia VALUES (57, 3, 'DES ARQ');
-INSERT INTO Materia VALUES (58, 3, 'AVAL TER');
+INSERT INTO Materia VALUES (57, 3, 'Desenho Arquitetônico');
+INSERT INTO Materia VALUES (58, 3, 'Avaliação de Terras');
 INSERT INTO Materia VALUES (59, 3, 'Topologia 1');
 INSERT INTO Materia VALUES (60, 3, 'Segurança no Trabalho');
 INSERT INTO Materia VALUES (61, 3, 'Cartografia');
-INSERT INTO Materia VALUES (62, 3, 'HIDROL');
-INSERT INTO Materia VALUES (63, 3, 'GEOCIE');
-INSERT INTO Materia VALUES (64, 3, 'S INF GEO');
+INSERT INTO Materia VALUES (62, 3, 'Hidrologia');
+INSERT INTO Materia VALUES (63, 3, 'Geociências');
+INSERT INTO Materia VALUES (64, 3, 'Sistemas de Informações Geográficos');
 INSERT INTO Materia VALUES (65, 3, 'CALCULO');
 INSERT INTO Materia VALUES (66, 3, 'Topologia 2');
 INSERT INTO Materia VALUES (67, 3, 'ESTRADAS');
-INSERT INTO Materia VALUES (68, 3, 'AVAL TERR');
-INSERT INTO Materia VALUES (69, 3, 'PL URB');
+INSERT INTO Materia VALUES (68, 3, 'Avaliação de Terras 2');
+INSERT INTO Materia VALUES (69, 3, 'Planejamento Urbano');
 INSERT INTO Materia VALUES (70, 3, 'PEDOLOG');
 INSERT INTO Materia VALUES (71, 3, 'Topologia 3');
-INSERT INTO Materia VALUES (72, 3, 'GEST AMB');
-INSERT INTO Materia VALUES (73, 3, 'SENSORIA');
-INSERT INTO Materia VALUES (74, 3, 'LEGISLAÇ');
+INSERT INTO Materia VALUES (72, 3, 'Gestão Ambiental');
+INSERT INTO Materia VALUES (73, 3, 'Sensoriamento');
+INSERT INTO Materia VALUES (74, 3, 'Legislação');
 INSERT INTO Materia VALUES (75, 3, 'Informática');
 
 INSERT INTO Materia VALUES (76, 1, 'Redação')
